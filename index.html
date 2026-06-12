@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="refresh" content="8;url=https://bright-sprite-6196fe.netlify.app">
+<title>Site Moved -- Gilshteyn v. AFAH et al.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #1a1a18;
+    --ink-soft: #4a4a45;
+    --ink-muted: #8a8a82;
+    --rule: #d4d0c8;
+    --cream: #faf8f3;
+    --paper: #ffffff;
+    --accent: #2c4a7c;
+    --accent-light: #e8edf5;
+    --sans: 'DM Sans', system-ui, sans-serif;
+    --serif: 'EB Garamond', Georgia, serif;
+  }
+  html, body {
+    height: 100%;
+    font-family: var(--sans);
+    background: var(--cream);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    text-align: center;
+  }
+  .card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 3rem 2.5rem;
+    max-width: 480px;
+    width: 100%;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.06);
+  }
+  .icon {
+    font-size: 40px;
+    margin-bottom: 1.25rem;
+    display: block;
+  }
+  .eyebrow {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 0.75rem;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.25;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 28px;
+    border-radius: 5px;
+    letter-spacing: 0.02em;
+    transition: background 0.15s;
+    margin-bottom: 1.5rem;
+  }
+  .btn:hover { background: #1e3560; }
+  .countdown-wrap {
+    font-size: 12px;
+    color: var(--ink-muted);
+    margin-top: 0.5rem;
+  }
+  .countdown-wrap span {
+    font-weight: 500;
+    color: var(--accent);
+  }
+  .progress-bar {
+    height: 3px;
+    background: var(--rule);
+    border-radius: 2px;
+    margin: 1.25rem 0 0;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--accent);
+    border-radius: 2px;
+    animation: fill 8s linear forwards;
+  }
+  @keyframes fill {
+    from { width: 0%; }
+    to { width: 100%; }
+  }
+  .case-ref {
+    font-size: 11px;
+    color: var(--ink-muted);
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--rule);
+    letter-spacing: 0.02em;
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .card { animation: fadeUp 0.4s ease both; }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <span class="icon">&#128274;</span>
+  <div class="eyebrow">Notice -- Page Moved</div>
+  <h1>This site has moved<br>to a secure location.</h1>
+  <p>
+    For enhanced security and confidentiality, the attorney intake summary for <em>Gilshteyn v. AFAH et al.</em> has been migrated to a new secured platform. Please update any saved links.
+  </p>
+  <a class="btn" href="https://bright-sprite-6196fe.netlify.app">Go to new site &rarr;</a>
+  <div class="countdown-wrap">Redirecting automatically in <span id="count">8</span> seconds...</div>
+  <div class="progress-bar"><div class="progress-fill"></div></div>
+  <div class="case-ref">Gilshteyn v. American Friends of Aish HaTorah -- Western Region, Inc., et al. &nbsp;|&nbsp; 26SMCV02706</div>
+</div>
+
+<script>
+  let n = 8;
+  const el = document.getElementById('count');
+  const timer = setInterval(() => {
+    n--;
+    el.textContent = n;
+    if (n <= 0) {
+      clearInterval(timer);
+      window.location.href = 'https://bright-sprite-6196fe.netlify.app';
+    }
+  }, 1000);
+</script>
+
+</body>
+</html>
